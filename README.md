@@ -88,3 +88,28 @@ npm ci
 node index.js YOUR_PROJECT_ID
 cd ..
 ```
+
+
+##  Connect your web app to your Firebase project
+Your web app's codebase needs to be associated with the correct Firebase project to utilize its services, such as the database. To accomplish this, you need to add your Firebase configuration to your app's codebase. This configuration includes essential values like your project ID, your app's API key and app ID, as well as other values that enable your app to interact with Firebase.
+
+1. Obtain your app's Firebase configuration:
+a. In the Firebase console, navigate to your Firebase project.
+b. In the left-side panel, click the gear icon next to Project Overview and select Project settings.
+c. In the "Your apps" card, select your web app.
+d. Under the "SDK setup and configuration" section, select the Config option.
+e. Copy the snippet. It begins with const firebaseConfig ....
+2. Add your Firebase configuration to your web app's codebase:
+In your code editor, open the src/lib/genkit/genkit.config.ts file.
+Replace the relevant section with the code that you copied.
+Save the file.
+
+
+## Preview the web app in your browser
+In your terminal, install dependencies and then run the web app:
+``` terminal
+npm install
+npm run dev:next
+```
+
+In your browser, navigate to the locally hosted Hosting URL to view the web app. For example, in most cases, the URL is http://localhost:3000/ or something similar.
